@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, #display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ 
+body {
+    height: 100vh;
+}
+
+#display {
+    width: 400px;
+    background-color: black;
+    height: 700px;
+    padding: 50px 0;
+}
+
+#left-bar, #right-bar, #middle-bar {
+    background: repeating-linear-gradient(
+    red 0, 
+    red 50px, 
+    black 50px, 
+    black 100px);
+    width: 80px;
+    height: 500px;
+    /* margin: 0 auto; */
+    animation: talk .5s linear 0s infinite;
+}
+
+#middle-bar {
+    height: 600px;
+    /* animation: talk-middle .5s linear 0s infinite; */
+}
+
+@keyframes talk {
+    0% {
+        /* height: 500px; */
+        transform: scaleY(1);
+    }
+    
+    50% {
+        /* height: 50px; */
+        transform: scaleY(.1);
+    }
+}
+
+@keyframes talk-middle {
+    0% {
+        height: 600px;
+    }
+    
+    50% {
+        height: 50px;
+    }
+}
+
+
